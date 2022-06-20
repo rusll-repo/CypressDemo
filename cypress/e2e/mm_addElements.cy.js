@@ -3,13 +3,14 @@ const BTN_ADD_ELEMENT = 'button[onclick="addElement()"]';
 
 describe('the-internet.herokuapp.com', () => {
     
-    it('Add/Remove one Element', () => {
+    beforeEach('Should navigate to add_remove_elements Page', () => {
         cy.visit('https://the-internet.herokuapp.com/');
         cy.get('a[href="/add_remove_elements/"]').click();
-        cy.get('h3').should('have.text', 'Add/Remove Elements');
+    })
 
+    it('Add/Remove one Element', () => {
         cy.get(BTN_ADD_ELEMENT).click();
-        cy.get(ELEMENTS).find('button').should('exist');
+        cy.get(ELEMENTS).find('button').should('exist').and('be.visible');
 
         cy.get(ELEMENTS).find('button').as('Delete').click();
         cy.get(ELEMENTS).find('button').should('not.exist');

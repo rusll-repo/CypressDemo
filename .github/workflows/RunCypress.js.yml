@@ -25,3 +25,15 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npx cypress run  --headless
+
+    - name: Create test summary
+      uses: test-summary/action@v1.0
+      with:
+        paths: reports/*.xml
+      if: always()
+      
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      if: always()
+      with:
+        files: "reports/*.xml"

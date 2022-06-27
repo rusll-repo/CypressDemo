@@ -1,5 +1,3 @@
-var expect = chai.expect;
-
 const IMAGES = "img";
 
 describe("the-internet.herokuapp.com", () => {

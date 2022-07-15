@@ -12,6 +12,9 @@ describe('Herokuapp', () => {
     it('Drags A to B', () => {
         const squareToMove = new DataTransfer();
 
+        cy.get('#column-a').should('have.text', 'A');
+        cy.get('#column-b').should('have.text', 'B');
+
         cy.get('#column-a').trigger('dragstart', {
             dataTransfer: squareToMove
         });

@@ -1,0 +1,11 @@
+{
+  "username": "tomsmith",
+  "password": "SuperSecretPassword!",
+  "messageLogin": "You logged into a secure area!",
+  "headerLogin": "Login Page",
+  "headerSecureArea": "Secure Area",
+  "subHeaderSecArea": "Welcome to the Secure Area.",
+  "textAlertLogin": "You logged into a secure area!",
+  "messageLogout": "You logged out of the secure area!",
+  "textAlertLogout": "You logged out of the secure area!"
+}
